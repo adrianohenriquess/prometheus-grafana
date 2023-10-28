@@ -1,0 +1,8 @@
+Primeiro pegar as requisições que deram certo para aplicação
+meno actuator
+http_server_requests_seconds_count{application="app-forum-api", method=~"GET|POST", status!~"2..|3..", uri!="/actuator/prometheus"}[1m]
+
+vai retornar um array de timestamp e na linha de comando:
+array=(@1698523727.21 @1698523732.21 @1698523737.21 @1698523742.21 @1698523747.21 @1698523752.21  @1698523757.21 @1698523762.21)
+coverter o array com esse comando
+for i in "${array[@]}" ; do date -d $i ; done
