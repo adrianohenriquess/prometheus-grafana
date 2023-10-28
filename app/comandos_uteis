@@ -6,3 +6,8 @@ vai retornar um array de timestamp e na linha de comando:
 array=(@1698523727.21 @1698523732.21 @1698523737.21 @1698523742.21 @1698523747.21 @1698523752.21  @1698523757.21 @1698523762.21)
 coverter o array com esse comando
 for i in "${array[@]}" ; do date -d $i ; done
+
+#saber a quantidade de requisições da aplicação por segundo
+nos ultimos 15 minutos
+irate(http_server_requests_seconds_count{application="app-forum-api",
+uri!="/actuator/prometheus"}[5m])
