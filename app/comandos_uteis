@@ -11,3 +11,7 @@ for i in "${array[@]}" ; do date -d $i ; done
 nos ultimos 15 minutos
 irate(http_server_requests_seconds_count{application="app-forum-api",
 uri!="/actuator/prometheus"}[5m])
+
+#agregar requisições por segundo
+sum(irate(http_server_requests_seconds_count
+{application="app-forum-api", uri!="/actuator/prometheus"}[5m]))
