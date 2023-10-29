@@ -1,0 +1,17 @@
+{
+	"ulid": "01HDYPS87PB2P7R57RRTQPWCYH",
+	"minTime": 1698544801999,
+	"maxTime": 1698552000000,
+	"stats": {
+		"numSamples": 252700,
+		"numSeries": 726,
+		"numChunks": 2738
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HDYPS87PB2P7R57RRTQPWCYH"
+		]
+	},
+	"version": 1
+}
