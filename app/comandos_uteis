@@ -15,3 +15,11 @@ uri!="/actuator/prometheus"}[5m])
 #agregar requisições por segundo
 sum(irate(http_server_requests_seconds_count
 {application="app-forum-api", uri!="/actuator/prometheus"}[5m]))
+
+
+#saber onde se encaixa em tempos de execução, 99% da requisições de
+#uma uri
+histogram_quantile(0.99,
+sum(rate(http_server_requests_seconds_bucket
+{application="app-forum-api", instance="app-forum-api:8080",
+job="app-forum-api", uri!="/actuator/prometheus"}[1m])) by (le))

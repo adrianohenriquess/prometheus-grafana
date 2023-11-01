@@ -1,0 +1,17 @@
+{
+	"ulid": "01HE443AEHW0DQ9K03DYT253QP",
+	"minTime": 1698616352841,
+	"maxTime": 1698616800000,
+	"stats": {
+		"numSamples": 29265,
+		"numSeries": 706,
+		"numChunks": 706
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HE443AEHW0DQ9K03DYT253QP"
+		]
+	},
+	"version": 1
+}
