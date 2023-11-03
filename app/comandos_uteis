@@ -23,3 +23,10 @@ histogram_quantile(0.99,
 sum(rate(http_server_requests_seconds_bucket
 {application="app-forum-api", instance="app-forum-api:8080",
 job="app-forum-api", uri!="/actuator/prometheus"}[1m])) by (le))
+
+
+#Comunicação com slack
+curl -X POST --data-urlencode "payload={\"channel\": \"#forum-api\", \"username\": \"webhookbot\", \"text\": \"Isso é postado em #forum-api originário de um bot chamado webhookbot.\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
+
+
+https://hooks.slack.com/services/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
